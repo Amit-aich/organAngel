@@ -2,18 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 
 function Profile() {
-    const data=[
-        {
-            hospital:"mgm",
-            organ:"kidney",
-            familymember:"robot"
-        },
-        {
-            hospital:"mgm2",
-            organ:"kidney",
-            familymember:"robot"
-        },
-    ]
+
     return (
         <>
             <Navbar />
