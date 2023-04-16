@@ -2,15 +2,19 @@ import React,{useState} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import OrganAngel from "../assets/OrganAngel.png"
 import donar from "../assets/donar.png"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Login() {
   const [data,setData]=useState({
     email:'',
     password:'',
   })
+  const [loading,setLoading] = useState(false)
   const navigateTo=useNavigate()
   const handleSubmit = async(e) => {
     e.preventDefault()
     console.log(data)
+    setLoading(true)
     const response = await fetch(`https://organangel.onrender.com/api/user/login`, {
       method: 'POST',
       headers: {
@@ -19,7 +23,8 @@ function Login() {
       body: JSON.stringify(data)
     });
      const logindata = await response.json()
-     console.log(logindata)
+    //  console.log(logindata)
+    setLoading(false)
     if(logindata.success)
     {
       navigateTo('/home')
@@ -27,7 +32,16 @@ function Login() {
     }
     else
     {
-      alert("login data error")
+      toast.error(logindata.error, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     }
 
 
@@ -72,7 +86,11 @@ function Login() {
                     <button
                     type="submit"
                       className="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] bg-gradient-to-r from-pink-500 to-yellow-500"  data-te-ripple-init
-                      data-te-ripple-color="light" style={{}} >Login </button>
+                      data-te-ripple-color="light" style={{}} >{loading && <div
+                      class="inline-block h-4 w-4 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-danger motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                      role="status">
+                      
+                    </div> } Login</button>
 
                     <a href="#!">Forgot password?</a>
                   </div>
@@ -110,6 +128,18 @@ function Login() {
     </div>
   </div>
   </section>
+  <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
 </div>
   )
 }

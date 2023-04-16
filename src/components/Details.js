@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Navbar from './Navbar'
-import Thanks from './Thanks'
+import ThanksSub from './ThanksSub'
 function Details() {
     const [show,setShow] =useState(false)
     return (
@@ -94,7 +94,7 @@ function Details() {
                 </div>
             </div>
 
-           {show?<Thanks closing={setShow}/>:<></>}
+           {show?<ThanksSub closing={setShow}/>:<></>}
         </>
     )
 }
