@@ -1,6 +1,5 @@
 import React,{useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-import axios from "axios";
 function Thanks({closing,data,url}) {
   const navigateTo=useNavigate()
   const adddata=async ()=>{

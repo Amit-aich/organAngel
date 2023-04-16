@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import axios from "axios";
 import facebook from "../assets/facebook.png"
 import gmail from  "../assets/gmail.png"
 import linkedin from "../assets/linkedin.png"

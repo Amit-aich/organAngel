@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import axios from "axios";
 import Navbar from "./Navbar"
 import Thanks from './Thanks'
 

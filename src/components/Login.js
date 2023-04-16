@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import OrganAngel from "../assets/OrganAngel.png"
 import donar from "../assets/donar.png"
-import axios from "axios";
 function Login() {
   const [data,setData]=useState({
     email:'',

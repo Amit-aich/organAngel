@@ -173,7 +173,6 @@ function Centers() {
         },
 
     ]
-    const [alldata, setalldata] = useState(data)
     const [filteredData, setFilteredData] = useState(data)
     const [sliced, setSliced] = useState(7)
     const handleLoadmore = () => {
