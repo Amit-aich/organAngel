@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-function Thanks({closing,data,url}) {
+function Thanks({data,url}) {
   const navigateTo=useNavigate()
   const adddata=async ()=>{
     const authtoken=localStorage.getItem('authtoken')

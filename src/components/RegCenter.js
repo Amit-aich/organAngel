@@ -124,7 +124,7 @@ function RegCenter() {
                 </div>
             </div>
           
-            {show?<Thanks data={data} url={`https://organangel.onrender.com/api/hospital/addhospital`} closing={setShow}/>:<></>}
+            {show?<Thanks data={data} url={`https://organangel.onrender.com/api/hospital/addhospital`} />:<></>}
         </>
     )
 }

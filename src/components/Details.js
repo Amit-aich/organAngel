@@ -1,7 +1,19 @@
 import React,{useState} from 'react'
 import Navbar from './Navbar'
-import ThanksSub from './ThanksSub'
+import { useLocation } from 'react-router-dom'
+import Thanks from './Thanks'
 function Details() {
+    const location=useLocation()
+    const [data,setData]=useState({
+        hospital:location.state.hospital,
+        familymember:"",
+        organ:location.state.organ
+    })
+    // useEffect(() =>
+    // {
+    //     console.log(location.state)
+    //     setData(prev=>{return{...prev,hospital:location.state.hospital,organ:location.state.organ}})
+    // },[location.state])
     const [show,setShow] =useState(false)
     return (
         <>
@@ -80,7 +92,7 @@ function Details() {
                                 <div className="mt-4">
                                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 undefined">Any family member name</label>
                                     <div className="flex flex-col items-start">
-                                        <input type="email" name="email" className="block w-full mt-1 h-10 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                                        <input type="email" name="email" value={data.familymember} onChange={(e)=>{setData(prev=>{return{...prev,familymember:e.target.value}})}} className="block w-full mt-1 h-10 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                                     </div>
                                 </div>
                                 
@@ -94,7 +106,7 @@ function Details() {
                 </div>
             </div>
 
-           {show?<ThanksSub closing={setShow}/>:<></>}
+           {show?<Thanks data={data} url={`https://organangel.onrender.com/api/doner/adddonation`}/>:<></>}
         </>
     )
 }

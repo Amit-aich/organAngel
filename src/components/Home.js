@@ -1,6 +1,9 @@
 import React from 'react'
 import banner from "../assets/banner.png"
 import Navbar from './Navbar'
+import Home1 from "../assets/Home1.png"
+import Home2 from "../assets/Home2.png"
+import Home3 from "../assets/Home3.png"
 
 function Home() {
   return (
@@ -29,19 +32,19 @@ function Home() {
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2 cursor-pointer overflow-hidden mt-4 ">
           <img
             className="object-cover w-full border transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110 duration-300 rounded-lg"
-            src="https://storage.googleapis.com/jacksonh/1/2016-03-04-OrganDonation.jpg" alt='grid1' />
+            src={Home1} alt='grid1' />
           <img
             className="object-cover w-full border transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110 duration-300 rounded-lg"
-            src="https://storage.googleapis.com/jacksonh/1/2016-03-04-OrganDonation.jpg" alt='grid2' />
+            src={Home3} alt='grid2' />
           <img
             className="object-cover w-full border transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110 duration-300 rounded-lg"
-            src="https://storage.googleapis.com/jacksonh/1/2016-03-04-OrganDonation.jpg" alt='3' />
+            src={Home2} alt='3' />
           <img
-            className="object-cover w-full border transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110 duration-300 rounded-lg"
+            className="h-[100%] object-cover w-full border transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110 duration-300 rounded-lg"
             src="https://storage.googleapis.com/jacksonh/1/2016-03-04-OrganDonation.jpg" alt='4' />
         </div>
         <div className='text-3xl text-center font-serif font-bold mt-4 bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500'>
-          <h1>Hear from some of the superheros itself</h1>
+          <h1>Hear from some of the superheroes itself</h1>
         </div>
         <div>
           <section class="mb-10 text-gray-800 text-center mt-3">
@@ -57,8 +60,7 @@ function Home() {
                     <div class="flex justify-center mb-4 mt-[-4%]">
                       <img className='w-[40%]' src='https://t3.ftcdn.net/jpg/02/97/01/64/360_F_297016408_5u0GkUlSv9oeRR0Z57kCn3aqu2flZn5V.jpg' alt=''/>
                     </div> 
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium accusamus
-                      voluptatum deleniti atque corrupti.</p>
+                    <p>OrganAngel is such a great platform which working for a great nobel cause, my experience with them is really well.There is no offline visits and all you can do is donate your organ so that someone can survive.</p>
                   </div>
                 </div>
               </div>
@@ -74,8 +76,7 @@ function Home() {
                     <div class="flex justify-center mb-6">
                     <img className='w-[40%] mt-[-4%]' src='https://t3.ftcdn.net/jpg/04/20/03/48/360_F_420034841_AKpgqQGkkUyeD7oWc9y8vGTMwT4GmbHm.jpg' alt=''/>
                     </div>
-                    <p>Ut pretium ultricies dignissim. Sed sit amet mi eget urna placerat vulputate. Ut vulputate est non quam
-                      dignissim elementum. Donec a ullamcorper diam.</p>
+                    <p>A great compnay , makes the process of organ donation to my doorstep. I was planning from long time for donation but organAngel give me that platform to do it in no time.</p>
                   </div>
                 </div>
               </div>
@@ -91,8 +92,7 @@ function Home() {
                     <ul class="flex justify-center mb-6">
                     <img className='w-[40%] mt-[-4%]' src='https://t3.ftcdn.net/jpg/02/97/01/64/360_F_297016408_5u0GkUlSv9oeRR0Z57kCn3aqu2flZn5V.jpg' alt=''/>
                     </ul>
-                    <p>Enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
-                      commodi quis nostrum minima.</p>
+                    <p>I also have joined this nobel cause and felling very happy that after me someone will survive by me what else can be more satisfying than this. Thank you organAngel.</p>
                   </div>
                 </div>
               </div>

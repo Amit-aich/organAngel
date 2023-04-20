@@ -26,7 +26,7 @@ function CenterInfo({ data }) {
           <p className='ml-4 font-mono'>{data.organ}</p>
         </div>
 
-        <Link to="/details">
+        <Link to="/details" state={{ hospital:data.hospitalName,organ:data.organ }}>
           <button className='bg-gradient-to-r from-pink-500 to-yellow-500 hover:from-pink-600 hover:to-yellow-600 w-32 h-8 text-white font-bold rounded-lg ml-20 mt-2 mb-2'>Connect</button>
         </Link>
       </div>
